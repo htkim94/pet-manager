@@ -1,0 +1,142 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #fef3e2 0%, #fde4cf 50%, #f8d5b8 100%);
+  font-family: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: #fffdf9;
+  border-radius: 24px;
+  box-shadow: 
+    0 4px 6px -1px rgba(139, 90, 43, 0.1),
+    0 10px 30px -5px rgba(139, 90, 43, 0.15);
+  padding: 2.5rem 2rem;
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logoSection {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logoIcon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #5c3d2e;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #8b6f5c;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  background: linear-gradient(135deg, #e07a3a 0%, #c4602a 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+  font-family: inherit;
+}
+
+.submitButton:hover {
+  background: linear-gradient(135deg, #c4602a 0%, #a84f20 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(224, 122, 58, 0.35);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #8b6f5c;
+}
+
+.footer a {
+  color: #e07a3a;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: #c4602a;
+  text-decoration: underline;
+}
+
+.message {
+  padding: 0.875rem 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.successMessage {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.errorMessage {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+}
